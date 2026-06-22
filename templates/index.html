@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Email Input Form</title>
-
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
 </head>
 <body>
 
@@ -17,7 +17,9 @@
             <!-- The 'name' attribute is what FastAPI reads -->
             <textarea id="email_body" name="email_body" placeholder="Write your email content..."></textarea>
         </div>
-        <button type="submit">Submit Body</button>
+        <div class="btn">
+            <button type="submit">Submit Body</button>
+            </div>
     </form>
 
     <!-- Display success message if variables exist -->
@@ -25,6 +27,6 @@
         <p><strong>Email is:</strong> {{ result }}</p>
     {% endif %}
 </div>
-
+{#<script src="{{ url_for('static', path='/script.js') }}"></script>#}
 </body>
 </html>
